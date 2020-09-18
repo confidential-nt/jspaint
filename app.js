@@ -10,6 +10,7 @@ const DEFAULT_SIZE = 700;
 
 canvas.width = DEFAULT_SIZE;
 canvas.height = DEFAULT_SIZE;
+
 ctx.fillStyle = "#fff";
 ctx.fillRect(0, 0, DEFAULT_SIZE, DEFAULT_SIZE);
 
@@ -81,6 +82,12 @@ function onMouseMove(event) {
   }
 }
 
+// function handleMediaQ() {
+//   const query = window.matchMedia("(max-width: 568px)");
+//   handleMediaQ(query);
+//   query.addEventListener(handleMediaQ);
+// }
+
 if (canvas) {
   canvas.addEventListener("mousemove", onMouseMove);
   canvas.addEventListener("mousedown", startPainting);
@@ -106,7 +113,16 @@ if (save) {
   save.addEventListener("click", handleSave);
 }
 
-if (window.matchMedia("(max-width: 568px)").matches) {
-  canvas.width = 500;
-  canvas.height = 500;
+function handleMQ(query) {
+  if (query.matches) {
+    canvas.width = 500;
+    canvas.height = 500;
+  } else {
+    canvas.width = 700;
+    canvas.height = 700;
+  }
 }
+
+const query = window.matchMedia("(max-width: 568px)");
+handleMQ(query);
+query.addListener(handleMQ);
