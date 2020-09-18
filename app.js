@@ -82,12 +82,6 @@ function onMouseMove(event) {
   }
 }
 
-// function handleMediaQ() {
-//   const query = window.matchMedia("(max-width: 568px)");
-//   handleMediaQ(query);
-//   query.addEventListener(handleMediaQ);
-// }
-
 if (canvas) {
   canvas.addEventListener("mousemove", onMouseMove);
   canvas.addEventListener("mousedown", startPainting);
