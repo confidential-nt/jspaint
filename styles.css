@@ -63,3 +63,28 @@ body {
 .controls .controls__range {
   margin-bottom: 30px;
 }
+
+@media screen and (max-width: 568px) {
+  body {
+    max-width: 100vh;
+    min-width: 568px;
+  }
+  .canvas {
+    width: 500px;
+    height: 500px;
+  }
+
+  .controls .controls__btns {
+    margin-bottom: 60px;
+  }
+
+  .controls__btns button {
+    width: 100px;
+    padding: 20px 0;
+    font-size: 18px;
+  }
+
+  .controls .controls__range {
+    margin-bottom: 60px;
+  }
+}
