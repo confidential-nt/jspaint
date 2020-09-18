@@ -105,3 +105,8 @@ if (mode) {
 if (save) {
   save.addEventListener("click", handleSave);
 }
+
+if (window.matchMedia("(max-width: 568px)").matches) {
+  canvas.width = 500;
+  canvas.height = 500;
+}
