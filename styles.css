@@ -67,7 +67,7 @@ body {
 
 @media screen and (max-width: 568px) {
   body {
-    max-width: 100vh;
+    max-width: 100vw;
     min-width: 568px;
   }
   .canvas {
